@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<script>
+			var arr=[];
+			function ab()
+			{
+				var a=document.getElementById('one');
+				var b=document.getElementById('two');
+				arr.push(a.value);
+				b.value=arr;
+				a.value=" ";
+			}
+			function def()
+			{
+				var len=arr.length;
+				if(len==0)
+				{
+					alert("No Underflow");
+				}
+				else
+				{
+					arr.pop(len);
+					var c=document.getElementById('two');
+					c.value=arr;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form>
+			<h2>ENTER NUMBER :<input type="text" name="first" id="one" /></h2>
+			<h2>STACK:        <input type="text" name="second" id="two"/></h2>
+			<h1><input type="button" value="push" onClick="ab()">
+			<input type="button" value="pop" onClick="def()"/>
+			</h1>
+		</form>
+	</body>
+</html>
