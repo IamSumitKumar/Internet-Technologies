@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sk@softech</title>
+	</head>
+	<body>
+		<div>
+			<form action="">
+				Name: <input type="text" id="name"/><br>
+				Roll no: <input type="number" id="roll"/><br>
+				DOB: <input type="date" id="dob"/><br>
+				<input type="button" value="Submit" onclick="validate()"/>
+			</form>
+			<p id="text"></p>
+		</div>
+
+		<script>
+			function validate()
+			{
+				var name=document.getElementById("name").value;
+				var roll=document.getElementById("roll").value;
+				var dob=document.getElementById("dob").value;
+				var p=document.getElementById("text");
+				var regAlpha=/^[A-Za-z]{1,}$/;
+				var regNum=/^[0-9]{7}$/;
+				
+				if(!name==""&&!roll==""&&!dob=="")
+				{
+					if(regAlpha.test(name)){
+						alert("Name Validated..!");
+					}
+					else{
+						alert("Name Not Validated..!");
+					}
+					if(regNum.test(roll)){
+						alert("Roll Validated..!");
+					}
+					else{
+						alert("Roll Not Validated..!");
+					}
+					p.innerHTML=new Date(dob);
+				}
+				else{
+					p.innerHTML="All fields are required";
+				}
+			}
+		</script>
+	</body>
+</html>
