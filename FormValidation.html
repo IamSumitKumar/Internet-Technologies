@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sk@softech: Form Validate</title>
+	</head>
+	<body>
+		<div>
+			<form name="form">
+				Name: <input type="text" id="name" name="Name"/><br><br>
+				Mobile: <input type="text" id="mob" name="Mobile"/><br><br>
+				Gender: Male<input type="radio" name="gender" value="male"/> Female<input type="radio" name="gender" value="female"/><br><br>
+				Interests: Cricket<input type="checkbox" id="crick" name="Interests"/> Football<input type="checkbox"  name="Interests" id="foot"/> Tennis<input type="checkbox" name="Interests" id="tennis"/><br><br>
+				<input type="button" value="Submit" onclick="check()"/>
+			</form>
+		</div>
+
+		<script>
+			function validate()
+			{
+				var a = 0, rdbtn=document.getElementsByName("gender");
+				for(i=0;i<rdbtn.length;i++)
+				{
+					if(rdbtn.item(i).checked == false)
+					{
+						a++;
+					}
+				}
+				if(a == rdbtn.length)
+				{
+					alert("Gender field is empty");
+				}
+			}
+			function validate1()
+			{
+				var b = 0, chk=document.getElementsByName("Interests")
+				for(j=0;j<chk.length;j++)
+				{
+					if(chk.item(j).checked == false)
+					{
+						b++;
+					}
+				}
+				if(b == chk.length)
+				{
+					alert("Interests field is empty");
+				}
+			}
+			function check()
+			{
+				var id,id2,f=0;
+				for(var i=0;i<2;i++)
+				{
+					if(form.elements[i].value=="")
+					{
+						alert(form.elements[i].name+ " field is empty");
+						id=form.elements[i].id;
+						f=1;        
+						break;
+					}
+				}
+				validate1();
+				document.getElementById(id).focus();
+			}
+		</script>
+	</body>
+</html>
