@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>Sk@softech: BubbleSort</title>
+	</head>
+	<body>
+		Enter value: 
+		<input type="text" id="enternum" onchange="copyval()" /><br><br><br>
+		<input type="button" id="push" value="SORT" onclick="sorting()"/><br>
+		<input type="text" id="dis" /><br>
+
+	<script type="text/javascript">
+		var arr=new Array();
+		function copyval()
+		{
+			var string = document.getElementById("enternum").value;
+			arr = string.split(",");
+			document.getElementById("enternum").value="";
+			for(var i=0; i<arr.length; i++)
+			{
+				arr[i] = parseInt(arr[i] , 10);
+			}
+			disp();
+		}
+		function sorting()
+		{
+			for(var i=0; i<arr.length-1; i++)
+				{
+					for(var j=0; j<arr.length-1-i; j++)
+					{
+						if(arr[j]>arr[j+1])
+						{
+							var t=arr[j];
+							arr[j]=arr[j+1];
+							arr[j+1]=t;
+						}
+					}
+				}
+			disp();
+		}
+		function disp()
+		{
+			var temp="";
+			for(var i=0; i<arr.length; i++)
+			{
+				temp+= arr[i]+" ";
+			}
+			document.getElementById("dis").value=temp;
+		}
+	</script>
+	</body>
+</html>
