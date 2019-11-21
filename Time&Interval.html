@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sk@softech: TimeOut|Interval</title>
+	</head>
+	<body onLoad="f()">
+		<div>
+			<p id="text">Hello World</p>
+			</div>
+			<div>
+			<img src="H:\wallpapers\me.jpg" id="im" height="150" width="250"><br>
+			<button onclick="g()" id="b1">Move Image</button>
+			<button onclick="h()" id="b2">Stop Image</button>
+		</div>
+
+		<script>
+			var l=0;var w;
+			function f()
+			{
+				setTimeout(()=>{document.getElementById("text").style.color="red";},3000);
+			}
+			function a()
+			{
+				var img = document.getElementById("im");
+				img.style.position="relative";
+				img.style.left=(l)+"px";
+				l+=10;
+			}
+			function g()
+			{
+				w=setInterval("a()",500);
+			}
+			function h()
+			{
+				clearInterval(w);
+			}
+		</script>
+	</body>
+</html>
