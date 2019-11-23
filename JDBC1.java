@@ -1,3 +1,14 @@
+/*1: Create Student and Results Database and perform the following using JDBC programs,
+a. Find total number of students
+b. Print average marks for each subject input by user.
+c. Find the name of student getting highest marks.
+d. Find no of students getting first, second and third division.
+e. Find subject wise toppers
+f. Find the average marks
+g. Find the student getting second highest marks.
+*/
+//!!! Resource @tutorials duniya
+
 package jdbc1;
 import java.io.BufferedReader;
 import java.io.IOException;
