@@ -1,0 +1,16 @@
+/*2: Make two files as follows:
+a. main.html: shows 2 text boxes and 3 radio buttons with values "addition", "subtraction" 
+and "multiplication"
+b. operate.jsp: depending on what the user selects perform the corresponding function 
+(Give two implementations: using request.getParameter() and using expression language)*/
+//!!! Resource @tutorials duniya
+
+<form action="operate2.jsp" method="get">
+    Number1:<input type="text" name="n1">
+    Number2:<input type="text" name="n2"><br/>
+    <input type="radio" name="op" value="1">Addition
+    <input type="radio" name="op" value="2">Subtraction
+    <input type="radio" name="op" value="3">Multiplication
+    <input type="radio" name="op" value="4">Division<br/>
+    <input type="submit" value="submit">
+</form>
