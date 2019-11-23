@@ -1,3 +1,7 @@
+/* Create a procedure in MySQL to count the number of Rows in table 'Student'. Use CallableStatement to call this method from Java code.
+*/
+//!!! Resource @tutorials duniya
+
 package jdbc2;
 import java.sql.CallableStatement;
 import java.sql.Connection;
