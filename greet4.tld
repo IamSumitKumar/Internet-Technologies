@@ -1,0 +1,25 @@
+/*4: Display Good Morning <uname>, Good Afternoon <uname> or Good Evening <uname>
+based on the current time of the day.*/
+//!!!Resource @tutorials duniya
+
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib
+	version="2.1" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+	
+	<tlib-version>1.0</tlib-version>
+    <short-name>greeta</short-name>
+    <uri>/WEB-INF/tlds/gret</uri>
+    <tag>
+        <name>today</name>
+        <tag-class>test.pro4</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+        <name>name1</name>
+        <required>true</required>
+        <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+</taglib>
