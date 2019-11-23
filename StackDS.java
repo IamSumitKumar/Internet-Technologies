@@ -1,3 +1,8 @@
+/* Implement an Abstract Class Stack with methods push, pop, display for two classes: StaticStack and DyanamicStack.
+StaticStack uses one dimensional integer array to store numbers and DyanamicStack uses an integer ArrayList to store.
+*/
+//!!! Resource @tutorials duniya
+
 package stackds;
 import java.util.Scanner;
 import java.util.ArrayList;
