@@ -34,7 +34,7 @@ class Account
 	Account(String name,int acc){
             this.name=name;
             this.acc=acc;
-            bal=0;
+            bal=0;//
 	}
 	public void createexist(){
             int ch;
