@@ -1,0 +1,39 @@
+/*6.2: Create your custom library which contains two tags: <hello>, <choco>.
+Usage of the tags:
+<hello name=”Ajay”>: Output should be Hello Ajay. It contains a mandatory attribute ‘name’ which can accept Dynamic value.
+<choco texture=”Chewy”>: Output should be FiveStar, BarOne.
+<choco texture=”Crunchy”>: Output should be Munch. KitKat.
+That means the mandatory attribute must accept a value, and based on the attributes value, it should give output. You must use a bean ChocoBean for this purpose.*/
+//!!! Resource @tutorials duniya
+
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib
+	version="2.1" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+	
+	<tlib-version>1.0</tlib-version>
+    <short-name>custom</short-name>
+    <uri>/WEB-INF/tlds/custom</uri>
+    <tag>
+        <name>choco</name>
+        <tag-class>com.tutorialsduniya.Program6</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>texture</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        </tag>
+        <tag>
+        <name>hello</name>
+        <tag-class>com.tutorialsduniya.Program6</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>name</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+</tag-lib>
