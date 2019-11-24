@@ -1,0 +1,60 @@
+/*9: Create a custom tag "today" that displays today's date and time.*/
+//!!! Resource @tutorialsduniya.com
+
+//Saved from DateTime9.jsp
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="x" uri="WEB-INF/tlds/today.tld" %>
+
+<!DOCTYPE html>
+<html>
+	<x:xyz></x:xyz>
+</html>
+
+//Saved from today9.tld
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib
+	version="2.1"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+	
+	<tlib-version>1.0</tlib-version>
+    <short-name>today</short-name>
+    <uri>/WEB-INF/tlds/today</uri>
+    <tag>
+        <name>xyz</name>
+        <tag-class>com.tutorialsduniya.DateTime</tag-class>
+        <body-content>empty</body-content>
+    </tag>
+</taglib>
+
+//Saved from DateTime9.java
+package com.tutorialsduniya;
+import javax.servlet.jsp.tagext.*;
+import javax.servlet.jsp.*;
+import java.io.*;
+import java.util.*;
+
+public class DateTime extends SimpleTagSupport 
+{
+    public void doTag() throws JspException, IOException 
+    {
+        JspWriter out = getJspContext().getOut();
+        try
+        {
+            out.print("Date : ");
+            out.print(Calendar.getInstance().get(Calendar.DAY_OF_MONTH)+"/");
+            out.print(Calendar.getInstance().get(Calendar.MONTH)+"/");
+            out.print(Calendar.getInstance().get(Calendar.YEAR)+"<br/>");
+            out.print("Time : ");
+            out.print(Calendar.getInstance().get(Calendar.HOUR_OF_DAY)+"hr-");
+            out.print(Calendar.getInstance().get(Calendar.MINUTE)+"min-");
+            out.print(Calendar.getInstance().get(Calendar.SECOND)+"sec");
+        }
+        catch(Exception e)
+        {
+            System.out.println(e);
+        }  
+    }
+}
